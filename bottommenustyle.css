@@ -1,0 +1,43 @@
+.bottomMenu{
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial;
+}
+
+.bottomMenu a{
+  font-size: 10px !important;
+  color: #646464;
+}
+
+.bottomMenu a:link,
+.bottomMenu a:visited{
+  text-decoration: none;
+  font-size: 10px !important;
+  color: #646464;
+}
+
+.bottomMenu a:link:hover,
+.bottomMenu a:visited:hover{
+  color: #353535;
+  text-decoration: underline;
+}
+
+.bottomMenuHeader{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+}
+
+.bottomMenuHeader>a{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #353535;
+}
+
+.bottomMenuHeader div{
+  padding-left: 0px;
+}
+
+.bottomMenuHeader div div div{
+  padding-left: 10px;
+}

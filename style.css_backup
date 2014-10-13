@@ -1,0 +1,690 @@
+/*
+Theme Name: Teatr Baza
+Author: DDBC
+Author URI: http://ddbc.pl
+*/
+
+@media screen {
+
+page{
+ margin:0px;
+}
+
+body{
+  margin: 0px;
+}
+
+img{
+  border: none;
+}
+
+a:link,
+a:visited{
+  color: #db2c24;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+a:link:hover,
+a:visited:hover{
+  font-size: 12px;
+  color: #D61010;
+  text-decoration: underline !important;
+}
+
+#header{
+  display: block;
+  width: 100%;
+  height: 96px;
+  background-color: #161616;
+  background-image: url(images/header32.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+    #search{
+        width: 950px;
+        left: -50px;
+        position: relative;
+        margin: 0px auto 0px;
+        height: inherit;
+    }
+
+    #searchform{
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width:300px;
+      text-align: right;
+    }
+
+        #s{
+          background-color: rgba(50,50,50, 0.5);
+          border: none;
+          font-family: Arial;
+          font-size: 12px;
+          font-weight: bold;
+          color: #FFFFFF;
+          text-shadow: 1px 1px 2px #000000;
+          padding: 2px;
+
+          background-image: url(images/search.png);
+          background-repeat: no-repeat;
+          background-position: right;
+          padding-right: 20px;
+        }
+
+        #searchsubmit{
+          display: none;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          background-color: transparent;
+          background-image: url(images/search.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          text-indent: -99999px;
+          width: 20px;
+          height: 20px;
+        }
+
+        #searchsubmit:hover{
+          background-color: rgba(100,100,100, 0.5);
+        }
+
+#navbar{
+  /* gorne menu na stronie */
+  background-color: #151515;
+  width: 100%;
+  display: block;
+}
+
+#navbar>ul{
+  position: relative;
+  left: -50px;
+  margin: 0px auto 0px;
+  width: 950px;
+}
+
+#navbarFooter{
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-image: url(images/headerfooter.png);
+  background-repeat: repeat-x;
+}
+
+#page{
+  width: 950px;
+  margin: 0px auto 0px;
+  margin-top: 20px;
+  position: relative;
+  left: -50px;
+}
+      #content{
+        width: 950px;
+        float: left;
+
+        font-family: Arial;
+        color: #848484;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: justify;
+      }
+
+      div.text{
+        padding-right: 20px;
+      }
+
+      div.text *:not(h1,h2,h3,h4,h5){
+        /*line-height: em !important;*/
+        font-family: Arial !important;
+        font-size: 12px !important;
+      }
+
+
+      blockquote {
+        display: block;
+        font-style: italic;
+        margin-bottom: 1em;
+        margin-right: 20px;
+        margin-top: 1em;
+        border-left: 4px solid #DFDFDF;
+        padding-left: 4px;
+        margin-left: 20px;
+      }
+
+
+      #sidebarParent{
+          float:right;
+          width: 0px;
+      }
+
+      #sidebar{
+          position: relative;
+          float:right;
+          width: 150px;
+          left: 160px; /* =szerokosci+10px */
+          top: 10px;
+          text-align: center;
+      }
+
+          #sidebar div.sidebar-header{
+            text-align: left;
+            display: block;
+            width: 100%;
+            height: 20px;
+            background-image: url(images/sidebar-header-back.png);
+            background-repeat: repeat-x;
+            background-position: center;
+            margin-bottom: 16px;
+          }
+
+          .sidebar-header a{
+            font-family: SteelfishRg-Regular;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: normal; /* domyslnie h1 jest bold */
+            background: #FFFFFF;
+            padding-right: 4px;
+            width: 100%;
+          }
+
+          .sidebarSeparator{
+            display: block;
+            width:100%;
+            height: 25px;
+          }
+
+
+#page img{
+  padding: 5px;
+  border: 1px solid #bbbbbb;
+  box-shadow: 1px 1px 3px rgba(0,0,0, 0.1);
+  border-radius:3px;
+  -khtml-border-radius:3px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+}
+
+
+#page a:link:hover img,
+#page a:visited:hover img{
+  /*box-shadow: 0px 0px 8px rgba(200,0,0, 1);*/
+}
+
+
+
+#page img.clear{
+  padding: 0px;
+  border: none;
+  box-shadow: none;
+  border-radius:0px;
+  -khtml-border-radius:0px;
+  -webkit-border-radius:0px;
+  -moz-border-radius:0px;
+}
+
+#page a:link img.clear,
+#page a:visited img.clear{
+    box-shadow: none;
+  }
+
+
+
+#cytat{
+  display: block;
+  border-top: 10px solid #ebebeb;
+  border-bottom: 10px solid #ebebeb;
+  margin: 8px 0px 16px 0px;
+  padding: 16px 0px 16px 0px;
+  line-height: normal;
+}
+
+      .trescCytatu{
+          display: block;
+          font-family: SteelfishRg-Bold;
+          font-size: 35px;
+          letter-spacing: 1px;
+          text-align: center;
+          text-transform: uppercase;
+          margin: 0px;
+          padding:0px;
+          color: #4f4f4f;
+      }
+
+      .trescCytatu  acolor{
+        color: #b13030;
+      }
+
+      #cytat a.autorCytatu{
+          display: block;
+          font-family: SteelfishRg-Regular;
+          font-size: 18px;
+          font-weight: normal;
+          letter-spacing: 1px;
+          text-align: Right;
+          margin-top: 6px;
+          padding-right: 100px;
+          color: #8e8e8e;
+      }
+
+
+#aktualnosci-header{
+  display: block;
+  background-color: #f5f6f6;
+  border-bottom: 10px solid #ebebeb;
+  margin-bottom: 20px;
+}
+
+        #aktualnosci-header a{
+            line-height: 40px;
+            display: block;
+            text-align: center;
+            font-family: SteelfishRg-Bold;
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #4f4f4f;
+        }
+
+        #aktualnosci-header img{
+          float: right;
+          position: relative;
+          top: -8px;
+        }
+
+
+#aktualnosci{
+    text-align: center;
+}
+
+        .aktualnosci-item{
+          text-align: left;
+          display: inline-block;
+          width: 222px;
+          margin: 0px 5px 0px 5px;
+          padding: 0px;
+          vertical-align: top;
+        }
+
+            .aktualnosci-item img{
+                display: block;
+                width: 210px;
+                height: 210px;
+            }
+
+            .aktualnosci-tytul{
+              display: block;
+              font-family: SteelfishRg-Bold;
+              font-size: 24px;
+              letter-spacing: 1px;
+              color: #b03832;
+              line-height: normal;
+              margin: 10px 0 10px 0;
+              text-transform: uppercase;
+            }
+
+            .aktualnosci-data{
+              line-height: 25px;
+              display: block;
+              border-top: 1px solid #b1b1b1;
+              border-bottom: 1px solid #b1b1b1;
+              font-family: arial;
+              font-size: 10px;
+
+            }
+
+            .aktualnosci-data a{
+              color: #b1b1b1;
+            }
+
+            .aktualnosci-data a:link,
+            .aktualnosci-data a:visited{
+              color: #b03832;
+              text-decoration: none;
+            }
+
+
+
+            .aktualnosci-opis{
+                line-height: 1.5em;
+                /*text-align: justify;*/
+                display:block;
+                margin: 10px 0 10px 0;
+            }
+
+            .aktualnosci-czytaj:link,
+            .aktualnosci-czytaj:visited{
+              display: block;
+              text-align: right;
+              color: #db2c24;
+              font-size: 11px;
+              border-top: 1px solid #b1b1b1;
+            }
+
+            .aktualnosci-czytaj:hover{
+              text-decoration: underline;
+            }
+
+
+.pedagogItem{
+  display: block;
+  clear: both;
+  min-height: 150px;
+  font-family: Arial;
+  color: #848484;
+  font-size: 12px;
+  text-align: justify;
+  /*line-height: 2;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+      .pedagogItem img{
+        /*float: left;*/
+        padding: 5px;
+        border: 1px solid #bbbbbb;
+        box-shadow: 1px 1px 3px rgba(0,0,0, 0.1);
+        border-radius:3px;
+        -khtml-border-radius:3px;
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+      }
+
+      .pedagogItem a.title{
+        display: block;
+        color: #4f4f4f;
+        font-family: SteelfishRg-Regular;
+        font-size: 21px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin-bottom: 10px;
+      }
+
+      .pedagogOpis{
+        float: right;
+        position: relative;
+        top:-10px;
+        width: 695px;
+      }
+
+      .pedagogContact{
+        display: block;
+        margin-top: 32px;
+      }
+
+      .pedagogContact a:link{
+        font-size: 11px;
+        font-weight: bold;
+        color:#4f4f4f;
+        text-decoration: none;
+        vertical-align: top;
+      }
+
+      .pedagogContact a:link:hover{
+        color: #D61010;
+      }
+
+      .contactSeparator{
+        display: inline-block;
+        width: 1px;
+        height:25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-left: 1px solid #c5c5c5;
+      }
+
+
+.dbline{
+  display:block;
+  height: 7px;
+  border-top: 1px solid #959596;
+  border-bottom: 1px solid #959596;
+}
+
+
+h1,h2,h3,h4,h5{
+    font-family: SteelfishRg-Bold !important;
+    font-weight: normal !important;
+    line-height: normal !important;
+    color: #3d3d3d !important;
+    letter-spacing: 1px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    text-transform: uppercase !important;
+}
+
+
+h1{
+    font-size: 30px !important;
+}
+
+h2{
+  font-size: 26px !important;
+}
+
+h3{
+  font-size: 22px !important;
+}
+
+
+h4{
+  font-size: 18px !important;
+}
+
+h5{
+  font-size: 14px !important;
+}
+
+
+
+
+.breadcrumbs{
+    font-family: SteelfishRg-Regular;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:#7E7E7E;
+    font-size: 20px;
+}
+
+a.breadcrumbsBold{
+    font-family: SteelfishRg-Bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3d3d3d;
+    font-size: 30px;
+}
+
+.smallbreadcrumbs a.breadcrumbs{
+  font-size: 15px;
+}
+
+.smallbreadcrumbs a.breadcrumbsBold{
+  font-size: 22px;
+}
+
+
+
+.separator{
+  display: block;
+  height: 1px;
+  border-bottom: 1px dotted #000000;
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+.gallery-item{
+    display: inline-block;
+    width: 222px;
+    max-height: 350px;
+    margin: 0px 5px 0px 5px;
+    padding: 0px;
+    vertical-align: top;
+}
+
+.gallery-item a,
+.gallery-item a:link,
+.gallery-item a:visited{
+    font-family: SteelfishRg-Regular;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color:#4f4f4f;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+
+
+
+
+.strona-galerii{
+  background-color: #FFFFFF;
+  padding-top: 5px;
+}
+
+
+
+img.fb,
+img.li,
+img.tw{
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  margin-left: 6px;
+}
+
+img.fb:hover,
+img.li:hover,
+img.tw:hover{
+    opacity: 1;
+    position: relative;
+    top: -3px;
+    height: 23px;
+}
+
+img.fb{
+  background-image: url(images/fb.gif);
+}
+
+img.li{
+  background-image: url(images/linkedin.gif);
+}
+
+img.tw{
+  background-image: url(images/twitter.gif);
+}
+
+
+
+
+
+
+#footer{
+  border-top: 8px solid #ebebeb;
+  border-bottom: 8px solid #ebebeb;
+  padding-top:10px;
+  padding-bottom:15px;
+}
+
+
+#ddbc{
+  float: right;
+  color: #b03832;
+}
+
+#ddbc:hover{
+  text-decoration: underline;
+}
+
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+    display:block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin:0;
+    max-width: 98.5%;
+    padding:0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size:11px;
+    line-height:17px;
+    margin:0;
+    padding:0 4px 5px;
+}

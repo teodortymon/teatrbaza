@@ -1,0 +1,163 @@
+img.myGal{
+  padding: 5px;
+  text-align: center;
+
+  border: 1px solid #bbbbbb;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 3px rgba(0,0,0, 0.3);
+  border-radius:3px;
+  -khtml-border-radius:3px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+/*  opacity: 0.5;*/
+}
+
+.selectedItem img{
+  background-color: #21759B;
+  border: 1px solid #164F67;
+  box-shadow: 1px 1px 5px rgba(0,0,0, 0.9);
+}
+
+#photos_container{ /*ul*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#photos_container li{
+    margin: 8px;
+    padding: 1px;
+
+    float: left;
+    width: 120px;
+    height: 120px;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+.myGalItem{
+  position: relative;
+}
+
+
+a.remove_photo{
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right:-8px;
+  top: -6px;
+
+  opacity: 0;
+  background: transparent url(images/remove.png) no-repeat;
+}
+
+#photos_container li:hover a.remove_photo{
+  opacity: 0.7;
+}
+
+
+#photos_container li:hover a.remove_photo:hover{
+  opacity: 1;
+}
+
+/*
+.photoname{
+  margin-top: 5px;
+  display: block;
+  font-weight: bold;
+  color: #21759b;
+  font-size: 12px;
+  font-weight: 700;
+  display: none;
+}
+*/
+
+#removeAll{
+    float: right;
+    background-image: url(images/remove.png); /* 16x16 px */
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    cursor: pointer;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+
+
+.inside{
+  padding: 0px !important;
+  margin: 0px  !important;
+}
+
+.field{
+    border-bottom-color: rgb(223, 223, 223);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin:0px;
+}
+
+.field:last-child{
+  border-bottom: none;
+}
+
+#galWindow{
+    max-height: 400px;
+    overflow-y: scroll;
+    box-shadow:inset 0 0 10px #000000;
+    border: 1px solid #D2D2D2;
+    margin-top: 8px;
+    background-color: #D1D1D1;
+}
+
+#galWindowBack{
+  /**/
+}
+
+.fieldName{
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  display: block;
+  font-weight: bold;
+  color: #21759b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#myGalDataFields{
+  width: 400px;
+}
+
+#myGalPhotoProperties{
+    display: none;
+}
+
+#myGalDataFields input,
+#myGalDataFields textarea{
+  width: 100%;
+}
+
+#statusBar{
+  margin-left: 8px;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+#statusBar #count{
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#shuffle{
+  background: transparent url(images/shuffle.png) no-repeat 3px 2px;
+  text-indent: 20px;
+}
