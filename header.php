@@ -41,7 +41,7 @@
 	
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bootstrap/dist/css/bootstrap.css">
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/cookies.js"></script>
 	
 </head>
