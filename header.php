@@ -60,94 +60,23 @@
 
 
 <div class="container">
-	<div class="dm_header col-md-12">
+	<div class="navbar navbar-default">
 		<a href="<?= site_url(); ?>" class="dm_logo">
 			<img src="<? bloginfo('template_url'); ?>/img/tb_logo.png" alt="Teatr Baza">
 		</a>
-		<div class="dm_cytat dm_center cytat_bask" style="padding-top:50px">
-		-Niezależne centrum kultury-
-			
-		</div>
 		<div>	<?php get_search_form(); ?></div>
-	</div>
-	<div class="dm_menu col-md-12">
-			<?php			
-				wp_nav_menu( array( 'theme_location' => 'glowne',
-									'menu_id' => 'nav',
-									'menu_class' => 'nav',
-									'container' => false
-									//'walker' => new My_Main_Menu() 
-									) ); //  klasa jest w functions.php
-			?>
-			
-			<script type="text/javascript">
-				$(document).ready(
-						function () {
-							//*********** ustawienie wielkosci i odleglosci wszystkich menu *******************//							
-							$('#nav>li').mouseenter(
-										function(){
-											if ( $(this).data('done') ){return;}
-											var width = $(this).width()+ ( $(this).width() / 2)- 10;
-											var left =  (width/2 )-15;
-											
-										
-										//	$('ul li', this).css({'width': width+'px', 'margin-left': ((width / 2)* -1)+'px' });
-										
-										var pwidth = $(this).width();
-										
-										
-											$('ul', this).css({marginLeft: (pwidth - width) /2});
-											
-											$('ul li', this).css({'width': width+'px' });
-											
-											$('ul li ul', this).parent().children('a').addClass('hassub');
-											$('ul li ul', this).css('left', (pwidth - width)+'px');
-											
-											$(this).data('done', true);
-										}
-										);
-																				
-							//*********** reakcje glownych  przyciskow menu *******************//
-							$('#nav>li').mouseenter( //tylko na glowne przyciski menu
-								function(){
-									clearTimeout($('ul:first', this).data('timeout'));
-									if ( $('ul:first', this).hasClass('visible') ){
-										return;
-									}
+        <div>
+                <?php			
+                    wp_nav_menu( array( 'theme_location' => 'glowne',
+                                        'menu_id' => 'nav',
+                                        'menu_class' => 'nav',
+                                        'container' => false,
+                                        'depth' => '2',
+                                        'walker' => new wp_bootstrap_navwalker())
+                                        //'walker' => new My_Main_Menu() 
+                                    ); //  klasa jest w functions.php
+                ?>
 
-									$('#nav li ul').filter('.visible').slideUp(150);
-									$('#nav li ul').filter('.visible').removeClass('visible');	
-									
-									$('.topItem', this).fadeIn(500);
-									$('ul:first', this).addClass('visible');
-									$('ul:first', this).slideDown(150);
-								}
-							);
-							
-							$('#nav>li').mouseleave( //tylko na glowne przyciski menu
-								function(){
-									var e= $('ul:first', this);
-									var t = setTimeout( function(){
-															e.slideUp(150, function(){
-																				e.removeClass('visible');
-																			}
-																	);
-														},
-														500);
-									e.data('timeout', t);
-								}
-							);	
-
-							$('#nav li').not($('#nav>li')).hover(
-									function () {
-										$('>ul', this).slideDown(150);
-									}, 		
-									function () {
-										$('>ul', this).slideUp(150);
-									}
-							);							
-				});
-			</script>	
-			
-	</div>
+         </div>
+    </div>
 	<div class="clear"></div>

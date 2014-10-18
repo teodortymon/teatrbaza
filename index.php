@@ -12,9 +12,24 @@
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+     <?php
+        global $post;
+	    $args = array( 	'numberposts' => 5,
+					'post_type' => 'any',
+					'meta_key' => 'pokaz_w_karuzeli',
+					'meta_value' => 1,
+					'post_status' => array('publish','future'),
+					'orderby'=> 'date',
+					'order' => 'DESC'
+				);
+	    $myposts = get_posts( $args );
+        foreach( $myposts as $key=>$post ) {
+            print ("<li data-target=\"#carousel-example-generic\" data-slide-to=\"$key\"");
+            if ($key == 0){
+		      print ('class="active">');}
+            print('</li>');
+        }
+    ?>
   </ol>
 
   <!-- Wrapper for slides -->

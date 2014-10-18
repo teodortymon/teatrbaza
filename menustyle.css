@@ -1,5 +1,5 @@
 /* remove the list style */
-
+/*
 #nav * a:link,
 #nav * a:visited,
 #nav * a:link:hover{
@@ -16,7 +16,7 @@ height: 12px;
 		
 	}
 
-		/* make the LI display inline it's position relative so that position absolute can be used in submenu */
+		
 		#nav li {
 			float:left;
 			display:block;
@@ -152,3 +152,4 @@ height: 12px;
   background-position: center right !important;
   background-repeat: no-repeat;
 }
+*/

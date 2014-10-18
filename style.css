@@ -189,30 +189,7 @@ a:visited:hover{
 
 
 
-#nav{font-family: 'Roboto Slab', serif;}
-#nav ul li a{font-family: 'Roboto Slab', serif;}
-#navbar{
-  /* gorne menu na stronie */
-  background-color: #151515;
-  width: 100%;
-  min-width: 1130px;  /* !!!!!!!! */
-  display: block;
 
-
-}
-
-#navbarMenuParent{
-    width: 1110px;
-    margin: 0px auto 0px;
-    padding-left: 20px;
-}
-
-#navbar>ul{
-/*  position: relative;
-  left: 0px;
-  margin: 0px auto 0px;*/
-  width: 950px;
-}
 
 #navbarFooter{
   display: block;
