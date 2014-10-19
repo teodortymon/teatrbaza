@@ -61,15 +61,21 @@
 
 <div class="container">
 	<div class="navbar navbar-default">
-		<a href="<?= site_url(); ?>" class="dm_logo">
+        <a href="<?= site_url(); ?>" class="navbar-brand">
 			<img src="<? bloginfo('template_url'); ?>/img/tb_logo.png" alt="Teatr Baza">
 		</a>
-		<div>	<?php get_search_form(); ?></div>
-        <div>
+<!--		<div>	<?php get_search_form(); ?></div>-->
+<!--
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+-->
+            
                 <?php			
                     wp_nav_menu( array( 'theme_location' => 'glowne',
-                                        'menu_id' => 'nav',
-                                        'menu_class' => 'nav',
+                                        //'menu_id' => 'nav',
+                                        'menu_class' => 'nav navbar-nav',
                                         'container' => false,
                                         'depth' => '2',
                                         'walker' => new wp_bootstrap_navwalker())
@@ -77,6 +83,6 @@
                                     ); //  klasa jest w functions.php
                 ?>
 
-         </div>
+<!--         </ul>-->
     </div>
 	<div class="clear"></div>
