@@ -7,7 +7,7 @@
 <? else: ?>
 
 <?php get_header(); ?>
-</script>
+
 <div class="col-md-12 omega">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->

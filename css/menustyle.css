@@ -1,0 +1,155 @@
+/* remove the list style */
+/*
+#nav * a:link,
+#nav * a:visited,
+#nav * a:link:hover{
+  text-decoration: none !important;
+}
+
+	#nav {
+margin: 0px 10px; padding: 0;
+list-style: none;
+border-left: 1px solid #000;
+border-right: 1px solid #000;
+height: 12px;
+		
+		
+	}
+
+		
+		#nav li {
+			float:left;
+			display:block;
+			position:relative;
+			z-index: 90;
+			
+			
+			
+		}
+		
+
+		
+		#nav > li {height:12px; border-left: 1px solid #000;margin:0;}
+		
+
+		
+		#nav > li:first-child {border-left:none;}
+		#nav > li > a {margin: -5px 3px; text-align:center;}
+		
+		#nav #menu-item-17  {margin:0px 2px;} /*teatr baza*/
+		#nav #menu-item-94  {margin:0px 2px;} /*kontakt*/
+			
+		#nav a {font-weight: bold;}
+		
+
+		/* navbar buttons */
+		#nav > li > a {
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+			text-decoration:none;
+			color:#000;
+			padding: 0px 13px;
+			display:block;
+			line-height: 12px;
+			height: 25px;
+			line-height: 25px;
+			
+          
+		}
+		#nav li:hover > a,
+		#nav .current-menu-parent > a,
+		#nav .current-menu-item > a, .current  {color:#fff!important; background-color: #636363;}
+
+
+		/* submenu, it's hidden by default */
+		#nav ul{
+		  /* BOX Z ITEMAMI */
+			position:absolute;
+			left:0;
+			display:none;
+			top:15px;
+			padding:0;
+			list-style:none;
+			z-index:300;
+		}
+
+		#nav ul li {
+     	  /* ITEMY */
+		   /* width: 170px;*/
+			float:left;
+			margin-bottom: 5px; 
+			/*border-top:1px solid #fff;*/
+		}
+
+		#nav ul a {
+		    /* CAPTION ITEMA */
+            text-align: center;
+            background-color: #dedede;
+		    font-family: Arial, Helvetica;
+            font-size: 10px;
+            text-transform: none;
+            text-shadow: none;
+			display:block;		/* display block will make the link fill the whole area of LI */
+			color:#000;
+            padding: 8px;
+            height: auto;
+            text-transform: uppercase;
+            line-height: 11px;
+		}
+
+        #nav:hover ul a,{  /* zeby kolor itemow sie zgadzal ;/ */
+			color:#000;
+            text-shadow: none;
+			text-decoration:none;
+        }
+
+		#nav ul a:hover{
+			text-decoration:none;
+            background-color: #636363;
+            color:#fff;
+		}
+
+        .topItem{
+          display: block;
+          position: relative;
+          height:17px;
+          top: -6px;
+          background-repeat: no-repeat;
+          margin-bottom: -5px;
+          z-index: 99;
+        }
+
+        .footerItem{
+          display: block;
+          height:8px;
+        }
+
+
+    /*****   SUBMENUS ******/
+
+		#nav ul li ul {
+		  /* SUB-BOX Z ITEMAMI */
+            display: none;
+			position:absolute;
+			left:170px;
+            top: 0px;
+			display:none;
+		}
+
+.ButtonSeparator{
+  float:left;
+  height: 24px;
+  width: 1px;
+  background-color: #454545;
+  position: relative;
+  top: 6px;
+}
+
+.hassub{
+  background-image: url(images/arrow.gif) !important;
+  background-position: center right !important;
+  background-repeat: no-repeat;
+}
+*/

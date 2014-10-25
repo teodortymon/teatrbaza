@@ -27,10 +27,10 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/MyFontsWebfontsOrderM3156695.css" type="text/css" /> 
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/menustyle.css" type="text/css" /> 
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bottommenustyle.css" type="text/css" /> 
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/orbit-1.2.3.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" type="text/css" /> 
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/menustyle.css" type="text/css" /> 
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bottommenustyle.css" type="text/css" /> 
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/orbit-1.2.3.css">
 	
 	
 	<?php //wp_enqueue_script('jquery'); ?>
@@ -41,7 +41,9 @@
 	
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/grid-salvattore.css">
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/salvattore.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/cookies.js"></script>
 	
 </head>
@@ -60,10 +62,20 @@
 
 
 <div class="container">
-	<div class="navbar navbar-default">
-        <a href="<?= site_url(); ?>" class="navbar-brand">
-			<img src="<? bloginfo('template_url'); ?>/img/tb_logo.png" alt="Teatr Baza">
-		</a>
+	<div class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+
+                <a href="<?= site_url(); ?>" class="navbar-brand">
+                    <img src="<? bloginfo('template_url'); ?>/img/tb_logo.png" alt="Teatr Baza">
+                </a>
+            </div>
 <!--		<div>	<?php get_search_form(); ?></div>-->
 <!--
         <ul class="nav navbar-nav">
@@ -71,7 +83,7 @@
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
 -->
-            
+            <div class="collapse navbar-collapse" id="menu-collapse">
                 <?php			
                     wp_nav_menu( array( 'theme_location' => 'glowne',
                                         //'menu_id' => 'nav',
@@ -82,7 +94,8 @@
                                         //'walker' => new My_Main_Menu() 
                                     ); //  klasa jest w functions.php
                 ?>
-
 <!--         </ul>-->
+            </div>
+        </div>
     </div>
 	<div class="clear"></div>
