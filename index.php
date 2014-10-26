@@ -8,7 +8,7 @@
 
 <?php get_header(); ?>
 
-<div class="col-md-12 omega">
+<div class="container omega post">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -107,17 +107,17 @@
          });
     </script>
        
-		</div>		
+		</div>		//carousel
 		</div><!-- slider end -->
 <!--<?php get_sidebar(); ?>-->
 
 		
 	
-<div class="col-md-12 omega">
-		<ul id="dm_aktualnosci">
-	<?php 
+<div class="container container-a2 omega">
+	<ul id="posts" class="caption-style-2" data-columns >
+     <?php 
 		
-		$args = array( 	'numberposts' => 5,
+		$args = array( 	'numberposts' => 10,
 						'post_type' => 'any', //spektakle
 						'meta_key' => 'pokaz_w_aktualnosciach',
 						'meta_value' => 1,
@@ -134,7 +134,8 @@
 			
 			$tytul = get_the_title();
 			$full = get_thumb();
-			$thumb = site_url().'/resize/218x120x1/r/'. dm_relative($full);
+			$thumb = $full;
+            //$thumb = site_url().'/resize/218x120x1/r/'. dm_relative($full);
 			
 			
 			$postType = get_post_type();
@@ -146,6 +147,20 @@
 			
 			?>
 			
+        
+		  <li class="post">
+              <a href="<?= $link; ?>"> <img src="<?=$thumb; ?>" alt="<?= $tytul; ?>"></a>
+					<div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3> <a href="<?= $link; ?>"><?= $tytul; ?></a> </h3>
+                             <a href="<?= $link; ?>">
+                                <?= $opis; ?> 
+                              </a>	
+                        </div>
+			  		</div>
+			 </li> 
+<!--
 			<li class="row alpha omega">
 				
                 <div class="col-md-4 alpha omega">	
@@ -161,23 +176,32 @@
 			  		</div>
 			 	</div> 
 			</li>
+-->
 			
 			 
 			<?
 		//	the_4col_item($thumb, $tytul, $data,  $catUrl, $cat, $opis, $link);
 		}	
 	?>
+<!--
+    <div class="post">
+        <a href="?post_type=aktualnosci" class="dm_archive_link">archiwum aktualności</a>
+    </div>
+-->
+    </ul>
 
 
 
-</ul>
 
- <a href="?post_type=aktualnosci" class="dm_archive_link">+ archiwum aktualności</a>
+ 
 
 </div>
 
 
+
 <?php get_footer(); ?>
+
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/salvattore.min.js"></script>
 
 
 <? endif; ?>
