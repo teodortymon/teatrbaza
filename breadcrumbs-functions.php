@@ -246,7 +246,7 @@ function breadcrumbs($forcedUrl='', $noBold=false){
 					$href = "#";
 				
 				if ( ($x==0) && (!$bold_suffix) && (!$noBold)){
-					$s = '<span class="breadcrumbs first">'.dm_more($title, 50, '…').'</span>'. $s;
+					$s = '<span class="breadcrumbs first">'.$title.'</span>'. $s;
 				}else{
 				
 					if($x != 1){
@@ -256,7 +256,7 @@ function breadcrumbs($forcedUrl='', $noBold=false){
 					}
 				
 					
-					$s = ' <a href="'.$href.'" class="breadcrumbs">'. dm_more($title, 50, '…').' </a>'.$separator. $s;
+					$s = ' <a href="'.$href.'" class="breadcrumbs">'.$title.' </a>'.$separator. $s;
 				}
 				
 				
@@ -266,14 +266,14 @@ function breadcrumbs($forcedUrl='', $noBold=false){
 				
 			}
 			if (!$noBold)
-				$s.= '<span class="breadcrumbsBold last">'. dm_more($suffix, 50, '…').'</span>'; //dokladamy tytul postu
+				$s.= '<span class="breadcrumbsBold last">'.$suffix.'</span>'; //dokladamy tytul postu
 			//echo $s;			
 			break;
 		}
 	}
 
 if ( (empty($s)) && (empty($forcedUrl)) && (!$noBold) )
-	$s='<span class="breadcrumbsBold single">'. dm_more(get_the_title(), 50, '…') .'</span>';
+	$s='<span class="breadcrumbsBold single">'.get_the_title().'</span>';
 echo $s;
 	
 }

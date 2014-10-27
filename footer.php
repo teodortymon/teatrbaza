@@ -1,7 +1,7 @@
 
 
 	
-
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/autohide.js"></script>
 <div class="clear"></div>
 		<div class="col-md-12 footer wide dm_sponsors">
 			<h2>Sponsorzy</h2>
@@ -146,6 +146,7 @@ e-mail: biuro@teatrbaza.pl<br/>
 	
 
 	  <script type="text/javascript">
+		  $(".navbar-header").autoHidingNavbar(); 
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-6406998-20']);
@@ -161,6 +162,7 @@ e-mail: biuro@teatrbaza.pl<br/>
 
    
   $(document).ready(function(){
+	  
   	
   	var emptyLink = $('a[href="#"]');
   

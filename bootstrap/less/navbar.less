@@ -12,7 +12,8 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border-bottom: 1px solid transparent;
+//  border-bottom: 1px solid transparent;
+  background-color: whitesmoke;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -20,6 +21,16 @@
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
   }
+  
+  &:after {
+		content: '';
+		position: absolute;
+		width: 83%;
+		left: 8.5%;
+//		bottom: 5px;
+		border-bottom: 1px solid #dedede;
+	}
+
 }
 
 
@@ -179,14 +190,14 @@
   }
 
   > img {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto !important;
-    display: inline-block !important;
+    //position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+    margin: -20px auto -25px auto !important;
+    float: none;
+    //display: inline-block !important;
     vertical-align: middle !important;
     
   }
@@ -246,7 +257,7 @@
 
 .navbar-nav {
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
-
+  
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;

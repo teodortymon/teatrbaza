@@ -107,7 +107,7 @@
          });
     </script>
        
-		</div>		//carousel
+		</div>	
 		</div><!-- slider end -->
 <!--<?php get_sidebar(); ?>-->
 
@@ -115,7 +115,57 @@
 	
 <div class="container container-a2 omega">
 	<ul id="posts" class="caption-style-2" data-columns >
-     <?php 
+             
+        
+        <div class="post">
+		<div class=" ">
+			<h2>Nadchodzące wydarzenia</h2>
+			<ul>
+			
+			
+			
+				
+	<?php 
+		//Wydarzenia
+		
+		$args = array( 	'numberposts' => 4,
+						'post_type' => 'any',
+						'meta_key' => 'pokaz_w_wiadomosciach',
+						'meta_value' => 1,
+						'post_status' => array('future', 'publish'),
+						'orderby'=> 'title',
+						'order' => 'DESC'
+					);
+		$myposts = get_posts( $args );
+		
+		foreach( $myposts as $post ) {
+			setup_postdata($post);
+
+			$opis= short_opis(200); //425
+			
+			$tytul = get_the_title();
+			$data = get_the_date("d.m.Y");
+			$link = get_permalink();
+			
+			?>
+			
+			<li>
+				<a href="<?= $link; ?>"><?= $tytul; ?></a> 
+			</li>
+			
+			 
+			<?
+		//	the_4col_item($thumb, $tytul, $data,  $catUrl, $cat, $opis, $link);
+		}	
+	?>
+			</ul>
+			
+			 <a href="?post_type=wydarzenia" class="">+ archiwum wydarzeń</a>
+            </div></div>
+
+        
+        
+        <?php 
 		
 		$args = array( 	'numberposts' => 10,
 						'post_type' => 'any', //spektakle
@@ -127,7 +177,28 @@
 					);
 		$myposts = get_posts( $args );
 		
-		foreach( $myposts as $post ) {
+		foreach( $myposts as $key=>$post ) {
+            
+            if($key == 5){
+               print '<div class="post dm_cytat">';
+                    $args2 = array( 'orderby' => 'rand', 'post_type' => 'cytaty', 'showposts' => 1 );
+            $query2= new WP_Query($args2);
+
+        // Loop
+        while($query2->have_posts()):
+             $query2->next_post();
+             $id2 = $query2->post->ID;
+            $tresc2 = get_the_title($id2);
+            $tresc2 = preg_replace('/%(.*?)%/', '<em class="color">$1</em>', $tresc2);
+
+            print '<div class="dm_middle"><div class="dm_inner"><span class="tresc">'.$tresc2.'</span>';
+            print '<span class="autor">';
+            print get_field("Autor", $id2);			
+            print '</span></div></div>';
+
+        endwhile;
+        print '</div>';
+            }
 			setup_postdata($post);
 
 			$opis= short_opis(200); //425
@@ -145,7 +216,7 @@
 			$data = get_the_date("d.m.Y");
 			$link = get_permalink();
 			
-			?>
+            ?>
 			
         
 		  <li class="post">
@@ -154,9 +225,11 @@
                         <div class="blur"></div>
                         <div class="caption-text">
                             <h3> <a href="<?= $link; ?>"><?= $tytul; ?></a> </h3>
+<!--
                              <a href="<?= $link; ?>">
                                 <?= $opis; ?> 
                               </a>	
+-->
                         </div>
 			  		</div>
 			 </li> 

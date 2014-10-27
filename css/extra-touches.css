@@ -1,0 +1,37 @@
+.hide {
+    display: none !important;
+}
+
+body {
+    color: #c30000 !important;
+    padding-top: 120px;
+}
+
+a.carousel-control:hover{
+    color: #fff;
+/*    background: transparent;*/
+}
+
+.dropdown-menu {
+    left: auto !important;
+    right: -25% !important;
+}
+.dropdown-menu:after {
+   left: auto !important;
+   right: 45% !important;
+}
+
+
+.shadow-bottom {
+ box-shadow:    0px 5px 18px -3px rgba(50, 50, 50, 0.26);
+    
+/* transition: box-shadow 1s;*/
+}
+
+.navbar {
+    box-shadow: 0;
+    -webkit-transition: box-shadow 1s ease-in-out;
+    -moz-transition: box-shadow 1s ease-in-out;
+    transition: box-shadow 1s ease-in-out
+/*    transition: box-shadow 1s ease-in-out;*/
+}

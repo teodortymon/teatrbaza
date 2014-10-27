@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/MyFontsWebfontsOrderM3156695.css" type="text/css" /> 
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" type="text/css" /> 
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/extra-touches.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/menustyle.css" type="text/css" /> 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bottommenustyle.css" type="text/css" /> 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/orbit-1.2.3.css">
@@ -53,7 +54,8 @@
 <body <?php body_class(); ?>>
 
 
-<script>(function(d, s, id) {
+<script>    
+(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
   js = d.createElement(s); js.id = id;
@@ -64,7 +66,7 @@
 
 
 <div class="container">
-	<div class="navbar navbar-default" role="navigation">
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
@@ -74,7 +76,7 @@
                     <span class="icon-bar"></span>
                   </button>
 
-                <a href="<?= site_url(); ?>" class="navbar-brand">
+                <a href="<?= site_url(); ?>" class="navbar-brand" id="navbar-header-img">
                     <img src="<? bloginfo('template_url'); ?>/img/tb_logo.png" alt="Teatr Baza">
                 </a>
             </div>

@@ -21,9 +21,9 @@
 			if (!empty($full))
 				echo '<a href="'.$full.'" '.$rel. '><img src="'.$thumb.'" style="float:left; margin-right: 12px; margin-bottom: 5px;"/></a>';
 			
-			print '<h2 class="title">';
-				 the_title();
-				print '</h2>';
+//			print '<h2 class="title">';
+//				 the_title();
+//				print '</h2>';
 			
 			echo $opis;
 			echo '<div style="clear:both; display:block; height:48px;"></div>';

@@ -25,7 +25,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               whitesmoke;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
 
@@ -210,7 +210,7 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    #fff;
+@dropdown-bg:                    whitesmoke; //#fff;
 //** Dropdown menu `border-color`.
 @dropdown-border:                rgba(0,0,0,.15);
 //** Dropdown menu `border-color` **for IE8**.
@@ -226,9 +226,9 @@
 @dropdown-link-hover-bg:         #f5f5f5;
 
 //** Active dropdown menu item text color.
-@dropdown-link-active-color:     @component-active-color;
+@dropdown-link-active-color:     darken(@dropdown-link-hover-color, 5%); //@component-active-color;
 //** Active dropdown menu item background color.
-@dropdown-link-active-bg:        @component-active-bg;
+@dropdown-link-active-bg:        darken(@dropdown-link-hover-bg, 5%); //@component-active-bg;
 
 //** Disabled dropdown menu item background color.
 @dropdown-link-disabled-color:   @gray-light;
@@ -343,7 +343,7 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
+@navbar-default-bg:                whitesmoke; //#f8f8f8;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
@@ -351,7 +351,7 @@
 @navbar-default-link-hover-color:          #333;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         #555;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-bg:            whitesmoke; //darken(@navbar-default-bg, 6.5%);
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
