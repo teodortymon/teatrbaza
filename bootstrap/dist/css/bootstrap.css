@@ -5685,10 +5685,19 @@ button.close {
 }
 .carousel {
   position: relative;
+  margin-bottom: 40px !important;
+  padding-bottom: 80px !important;
+}
+.carousel:after {
+  content: '' !important;
+  position: absolute !important;
+  margin-top: 90px;
+  width: 82% !important;
+  left: 9% !important;
+  border-bottom: 1px solid #dedede !important;
 }
 .carousel-inner {
   position: relative;
-  overflow: hidden;
   width: 100%;
 }
 .carousel-inner > .item {
@@ -5780,7 +5789,7 @@ button.close {
 .carousel-control .icon-next {
   width: 20px;
   height: 20px;
-  margin-top: -10px;
+  margin-top: 0px;
   font-family: serif;
 }
 .carousel-control .icon-prev:before {
@@ -5791,7 +5800,7 @@ button.close {
 }
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px !important;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -5806,32 +5815,29 @@ button.close {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid #ffffff;
+  border: 1px solid grey;
   border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
 }
 .carousel-indicators .active {
-  margin: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
+  margin: 1px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(175, 175, 175, 0.65);
 }
 .carousel-caption {
+  overflow: visible !important;
   position: absolute;
   left: 15%;
   right: 15%;
-  bottom: 20px;
-  z-index: 10;
+  bottom: -80px;
+  z-index: 9999;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.carousel-caption .btn {
-  text-shadow: none;
 }
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,

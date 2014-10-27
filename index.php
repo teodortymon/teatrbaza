@@ -8,8 +8,8 @@
 
 <?php get_header(); ?>
 
-<div class="container omega post">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<!--<div class="container omega post" id="carousel-post">-->
+    <div id="carousel-example-generic" class="container post carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
      <?php
@@ -78,7 +78,7 @@
             <a href="<?php echo get_permalink(); ?>"><img src="<?php echo $thumb; ?>"></a>
           <div class="carousel-caption">
 <!--            <h3>...</h3>-->
-            <p><?php the_title(); ?>.</p>
+            <h3><?php the_title(); ?>.</h3>
           </div>
         </div>
 <!--
@@ -108,7 +108,7 @@
     </script>
        
 		</div>	
-		</div><!-- slider end -->
+<!--		</div> slider end -->
 <!--<?php get_sidebar(); ?>-->
 
 		
@@ -117,9 +117,8 @@
 	<ul id="posts" class="caption-style-2" data-columns >
              
         
-        <div class="post">
-		<div class=" ">
-			<h2>Nadchodzące wydarzenia</h2>
+        <div class="post upcoming-events" id="post-1">
+			<h3>Nadchodzące wydarzenia</h3>
 			<ul>
 			
 			
@@ -161,7 +160,7 @@
 			</ul>
 			
 			 <a href="?post_type=wydarzenia" class="">+ archiwum wydarzeń</a>
-            </div></div>
+            </div>
 
         
         
@@ -219,9 +218,8 @@
             ?>
 			
         
-		  <li class="post">
-              <a href="<?= $link; ?>"> <img src="<?=$thumb; ?>" alt="<?= $tytul; ?>"></a>
-					<div class="caption">
+		  <li class="post" id="post-<?= $key+2; ?>" </l>
+              <div class="caption">
                         <div class="blur"></div>
                         <div class="caption-text">
                             <h3> <a href="<?= $link; ?>"><?= $tytul; ?></a> </h3>
@@ -232,6 +230,10 @@
 -->
                         </div>
 			  		</div>
+              
+              
+              <a href="<?= $link; ?>"> <img src="<?=$thumb; ?>" alt="<?= $tytul; ?>"></a>
+					
 			 </li> 
 <!--
 			<li class="row alpha omega">

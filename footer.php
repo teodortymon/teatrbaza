@@ -165,6 +165,7 @@ e-mail: biuro@teatrbaza.pl<br/>
 	  
   	
   	var emptyLink = $('a[href="#"]');
+	  // $('#posts').fullpage();
   
   	emptyLink.click(function(e){ 
   		e.preventDefault();

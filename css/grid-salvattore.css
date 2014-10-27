@@ -1,19 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic|Lato:400,300,500|Nobile:400,300);
+
+
+
+.carousel-caption { 
+    position: absolute;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size:;
+    color:inherit;
+    text-shadow: none;
+    
+}
+
+
 .post img {
     width: 100%;
 }
  
 .post{
   background: #ffffff;
+    text-align: center;
+  margin: 10px 10px;
+  border: 1px solid white;
+
+    -webkit-transition: border 0.3s ease-in-out;
+    -moz-transition: border 1s ease-in-out;
+    transition: border 1s ease-in-out
+    
+        
+
+/*
   margin: 10px 5px;
   border: 0.5px solid rgba(0, 0, 0, 0.27);
-/*  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);*/
+  //box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);
   box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+*/
   z-index: 999;
 }
 
-.post .caption-text{
-    margin-top: 0px;
-    border-top: 10px solid grey;
+
+
+.post h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.dm_cytat .dm_inner .tresc{
+    font-family: 'Lato', italic;
+    font-weight: 400;
+}
+.dm_cytat .dm_inner .autor{
+    margin: 20px 0 0 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+
+.post:hover{
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}
+
+.post.carousel:hover {
+    border: 1px solid white;
+}
+
+
+.post .caption-text a {
+    color:inherit;
+     
+}
+.post .caption-text a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.post.upcoming-events a{
+    text-decoration: none;
+    color:inherit;
+    -webkit-transition: font-size 0.4s ease-in-out;
+    -moz-transition: font-size 0.4s ease-in-out;
+    transition: font-size 0.4s ease-in-out
+}
+
+.post.upcoming-events a:hover{
+    text-decoration: none;
+    color: #070707;
+    font-size: 14.3px;
 }
 /*
    Spezific styling for salvattore
@@ -56,10 +134,11 @@
  
 @media screen and (min-width: 851px) {
     #posts[data-columns]::before {
-        content: '4 .column.size-1of4';
+        content: '3 .column.size-1of3';
     }
     .post{
-    	padding: 7.5px;
+/*    	padding: 7.5px;*/
+        padding: 20px;
     }
     
 }

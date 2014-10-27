@@ -33,6 +33,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/menustyle.css" type="text/css" /> 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bottommenustyle.css" type="text/css" /> 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/orbit-1.2.3.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/onepage-scroll.css">
 	
 	
 	<?php //wp_enqueue_script('jquery'); ?>
@@ -48,6 +49,7 @@
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bootstrap/dist/js/bootstrap.min.js"></script>
 <!--    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/salvattore.min.js"></script>-->
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/cookies.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.onepage-scroll.js"></script>
 	
 </head>
 

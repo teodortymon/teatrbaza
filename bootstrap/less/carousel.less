@@ -6,11 +6,26 @@
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
+  
+  margin-bottom: 40px !important;
+  padding-bottom: 80px !important;
+  
+//  border-bottom: 1px solid lightgray !important;
+  
+  &:after {
+		content: '' !important;
+		position: absolute !important;
+        margin-top: 90px;
+		width: 82% !important;
+		left: 9% !important; 
+//		bottom: 5px;
+		border-bottom: 1px solid #dedede !important;
+	}
 }
 
 .carousel-inner {
   position: relative;
-  overflow: hidden;
+//  overflow: hidden;
   width: 100%;
 
   > .item {
@@ -123,7 +138,7 @@
   .icon-next {
     width:  20px;
     height: 20px;
-    margin-top: -10px;
+    margin-top: 0px;
     font-family: serif;
   }
 
@@ -147,7 +162,7 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px !important;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -162,7 +177,7 @@
     height: 10px;
     margin: 1px;
     text-indent: -999px;
-    border: 1px solid @carousel-indicator-border-color;
+    border: 1px solid grey; //@carousel-indicator-border-color;
     border-radius: 10px;
     cursor: pointer;
 
@@ -175,13 +190,13 @@
     // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
     // set alpha transparency for the best results possible.
     background-color: #000 \9; // IE8
-    background-color: rgba(0,0,0,0); // IE9
+    background-color: rgba(0, 0, 0, 0); // IE9
   }
   .active {
-    margin: 0;
-    width:  12px;
-    height: 12px;
-    background-color: @carousel-indicator-active-bg;
+    margin: 1px;
+    width:  10px;
+    height: 10px;
+    background-color: rgba(175, 175, 175, 0.65); //@carousel-indicator-active-bg;
   }
 }
 
@@ -189,19 +204,20 @@
 // -----------------------------
 // Hidden by default for smaller viewports
 .carousel-caption {
+  overflow: visible !important;
   position: absolute;
   left: 15%;
   right: 15%;
-  bottom: 20px;
-  z-index: 10;
+  bottom: -80px;
+  z-index: 9999;
   padding-top: 20px;
   padding-bottom: 20px;
   color: @carousel-caption-color;
   text-align: center;
-  text-shadow: @carousel-text-shadow;
-  & .btn {
-    text-shadow: none; // No shadow for button elements in carousel-caption
-  }
+//  text-shadow: @carousel-text-shadow;
+//  & .btn {
+//    text-shadow: none; // No shadow for button elements in carousel-caption
+//  }
 }
 
 

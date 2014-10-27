@@ -3,9 +3,18 @@
 }
 
 body {
-    color: #c30000 !important;
+    background-color: white !important;
     padding-top: 120px;
 }
+
+/*
+#carousel-example-generic{
+    margin-bottom: 30px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid lightgray;
+    
+}
+*/
 
 a.carousel-control:hover{
     color: #fff;
@@ -29,6 +38,8 @@ a.carousel-control:hover{
 }
 
 .navbar {
+    background-color: white !important;
+    
     box-shadow: 0;
     -webkit-transition: box-shadow 1s ease-in-out;
     -moz-transition: box-shadow 1s ease-in-out;
