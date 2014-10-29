@@ -5,7 +5,7 @@
 
 		<?php if (have_posts()) : ?>
 		
-		<div class="dm_breadcrumbs"><?php breadcrumbs(); ?></div>
+		<div class="breadcrumbs_new"><?php breadcrumbs(); ?></div>
 		<ul>
 			<?php while (have_posts()) : the_post(); 
 				$title= get_the_title();

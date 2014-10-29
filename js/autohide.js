@@ -35,7 +35,7 @@
   }
 
   function hide(autoHidingNavbar) {
-    if (!_visible) {
+    if (!_visible || ($(".navbar-collapse").css("box-shadow") != "none" ) ) {
       return;
     }
 

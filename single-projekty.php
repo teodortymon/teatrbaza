@@ -6,7 +6,7 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); 
 			?>
 			
-		<div class="dm_breadcrumbs">
+		<div class="breadcrumbs_new">
 			<?php breadcrumbs(); ?>
 		</div>
 			

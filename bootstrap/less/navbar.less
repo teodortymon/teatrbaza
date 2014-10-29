@@ -154,12 +154,13 @@
   position: fixed;
   right: 0;
   left: 0;
-  z-index: @zindex-navbar-fixed;
+  z-index: 999999;
 
   // Undo the rounded corners
   @media (min-width: @grid-float-breakpoint) {
     border-radius: 0;
   }
+  
 }
 .navbar-fixed-top {
   top: 0;
@@ -199,6 +200,11 @@
     float: none;
     //display: inline-block !important;
     vertical-align: middle !important;
+    
+    @media (max-width: @grid-float-breakpoint) {
+      margin: 15px auto -15px auto!important;
+  }
+    
     
   }
 
@@ -444,14 +450,14 @@
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
-        background-color: @navbar-default-link-hover-bg;
+        background-color: white;//@navbar-default-link-bg;
       }
     }
     > .active > a {
       &,
       &:hover,
       &:focus {
-        color: @navbar-default-link-active-color;
+        color: @navbar-default-link-hover-color;//@navbar-default-link-active-color;
         background-color: @navbar-default-link-active-bg;
       }
     }
@@ -488,8 +494,8 @@
       &,
       &:hover,
       &:focus {
-        background-color: @navbar-default-link-active-bg;
-        color: @navbar-default-link-active-color;
+        background-color: white;//@navbar-default-link-active-bg;
+        color: @navbar-default-link-hover-color;//@navbar-default-link-active-color;
       }
     }
 

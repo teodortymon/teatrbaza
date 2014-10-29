@@ -3845,7 +3845,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 999999;
 }
 @media (min-width: 768px) {
   .navbar-fixed-top,
@@ -3878,6 +3878,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin: -20px auto -25px auto !important;
   float: none;
   vertical-align: middle !important;
+}
+@media (max-width: 768px) {
+  .navbar-brand > img {
+    margin: 15px auto -15px auto !important;
+  }
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -4096,12 +4101,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #333333;
-  background-color: transparent;
+  background-color: white;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
+  color: #333333;
   background-color: #f5f5f5;
 }
 .navbar-default .navbar-nav > .disabled > a,
@@ -4127,8 +4132,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #f5f5f5;
-  color: #555555;
+  background-color: white;
+  color: #333333;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -5695,6 +5700,11 @@ button.close {
   width: 82% !important;
   left: 9% !important;
   border-bottom: 1px solid #dedede !important;
+}
+@media (max-width: 767px) {
+  .carousel .carousel-caption h3 {
+    font-size: 22px !important;
+  }
 }
 .carousel-inner {
   position: relative;

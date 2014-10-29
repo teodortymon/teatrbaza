@@ -1,17 +1,24 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic|Lato:400,300,500|Nobile:400,300);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,500|Lato:400,300,500|Nobile:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,500|Droid+Sans:400,300,500);
 
+
+
+.navbar{
+/*    font-family: 'Droid Sans', sans-serif;*/
+    font-weight: 500;
+    font-size: 15px;
+}
 
 
 .carousel-caption { 
+    display: block;
     position: absolute;
     margin: 0 auto 0 auto;
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    font-size:;
     color:inherit;
     text-shadow: none;
-    
 }
 
 
@@ -46,6 +53,13 @@
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+
+@media all and (max-width: 767px){
+    .post h3 {
+        font-size: 22px !important;
+    }
+}
+
 
 .dm_cytat .dm_inner .tresc{
     font-family: 'Lato', italic;

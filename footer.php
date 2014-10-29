@@ -3,98 +3,114 @@
 	
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/autohide.js"></script>
 <div class="clear"></div>
-		<div class="col-md-12 footer wide dm_sponsors">
-			<h2>Sponsorzy</h2>
-		<?php
-			global $post;
-			
-			$sponsors = 5;
-			
-			$tw = 116;
-			$th = 82;
-			$args = array( 'post_type' => 'sponsorzy' );
-			$myposts = get_posts($args);
-			
-			
-			foreach( $myposts as $post ){
-				$title = get_the_title();
-				$imgpath = dm_relative(get_field('logo'));
-				$thumb = site_url().'/resize/'.$tw.'x'.$tw.'x3/r/'. $imgpath;
-				$url   = get_field('url');
-				
-				if(!$imgpath){
-					echo '<a href="'.$url.'" target="_blank" class="dm_no-logos">';
-					echo $title;
-					echo '</a>';				
-				}else{
-					echo '<a href="'.$url.'" target="_blank">';
-					echo '<img src="'.$thumb.'" alt="'.$title.'" title="'.$title.'"/>';
-					echo '</a>';
-				
-				}
-				
-			}
-			
-			
-			
-			for($i = count($myposts) ; $i < $sponsors; $i++){
-				print '<div class="dm_spon_placeholder"><a href="'. site_url() .'/?page_id=91"></a></div>';
-			}
-			
-		?>
-            <div class="col-md-12 footer wide dm_sponsors">
-                <h2>Współpraca</h2>
-		<?php
-			$args = array( 'post_type' => 'wspolpracownicy' );
-			$myposts = get_posts($args);
-			foreach( $myposts as $post ){
-				$title = get_the_title();
-				$imgpath = dm_relative(get_field('logo'));
-				$thumb = site_url().'/resize/'.$tw.'x'.$tw.'x3/r/'. $imgpath;
-				$url   = get_field('url');
-				
-				if(!$imgpath){
-					echo '<a href="'.$url.'" target="_blank" class="dm_no-logos">';
-					echo $title;
-					echo '</a>';				
-				}else{
-					echo '<a href="'.$url.'" target="_blank">';
-					echo '<img src="'.$thumb.'" alt="'.$title.'" title="'.$title.'"/>';
-					echo '</a>';
-				
-				}
-			}
-		?>
+		<div class="col-md-9 footer dm_sponsors">
+			<div class="row"><h2>Sponsorzy</h2>
+				<?php
+					global $post;
 
+					$sponsors = 5;
+
+//					$tw = 116;
+//					$th = 82;
+					$tw = 90;
+					$th = 90;
+
+					$args = array( 'post_type' => 'sponsorzy' );
+					$myposts = get_posts($args);
+
+
+					foreach( $myposts as $post ){
+						$title = get_the_title();
+						$imgpath = dm_relative(get_field('logo'));
+						$thumb = site_url().'/resize/'.$tw.'x'.$tw.'x3/r/'. $imgpath;
+						$url   = get_field('url');
+
+						if(!$imgpath){
+							echo '<a href="'.$url.'" target="_blank" class="dm_no-logos">';
+							echo $title;
+							echo '</a>';				
+						}else{
+							echo '<a href="'.$url.'" target="_blank">';
+							echo '<img src="'.$thumb.'" alt="'.$title.'" title="'.$title.'"/>';
+							echo '</a>';
+
+						}
+
+					}
+
+
+
+					for($i = count($myposts) ; $i < $sponsors; $i++){
+						print '<div class="dm_spon_placeholder"><a href="'. site_url() .'/?page_id=91"></a></div>';
+					}
+
+				?>
 		</div>
-		<div class="col-md-12 footer wide dm_sponsors">
-            <h2>Przyjaciele</h2>
-		<?php
-			$args = array( 'post_type' => 'przyjaciele' );
-			$myposts = get_posts($args);
-			foreach( $myposts as $post ){
-				$title = get_the_title();
-				
-				$imgpath = dm_relative(get_field('logo'));
-				$thumb = site_url().'/resize/'.$tw.'x'.$tw.'x3/r/'. $imgpath;
-				$url   = get_field('url');
-				
+            <div class="row">
+					<h2>Współpraca</h2>
+			<?php
+				$args = array( 'post_type' => 'wspolpracownicy' );
+				$myposts = get_posts($args);
+				foreach( $myposts as $post ){
+					$title = get_the_title();
+					$imgpath = dm_relative(get_field('logo'));
+					$thumb = site_url().'/resize/'.$tw.'x'.$tw.'x3/r/'. $imgpath;
+					$url   = get_field('url');
 
-				
-				if(!$imgpath){
-					echo '<a href="'.$url.'" target="_blank" class="dm_no-logos">';
-					echo $title;
-					echo '</a>';				
-				}else{
-					echo '<a href="'.$url.'" target="_blank">';
-					echo '<img src="'.$thumb.'" alt="'.$title.'" title="'.$title.'"/>';
-					echo '</a>';
-				
+					if(!$imgpath){
+						echo '<a href="'.$url.'" target="_blank" class="dm_no-logos">';
+						echo $title;
+						echo '</a>';				
+					}else{
+						echo '<a href="'.$url.'" target="_blank">';
+						echo '<img src="'.$thumb.'" alt="'.$title.'" title="'.$title.'"/>';
+						echo '</a>';
+
+					}
 				}
-			}
-		?>
+			?>
+		</div>
+			
+		<div class="row">
+				<h2>Przyjaciele</h2>
+			<?php
+				$args = array( 'post_type' => 'przyjaciele' );
+				$myposts = get_posts($args);
+				foreach( $myposts as $post ){
+					$title = get_the_title();
+
+					$imgpath = dm_relative(get_field('logo'));
+					$thumb = site_url().'/resize/'.$tw.'x'.$tw.'x3/r/'. $imgpath;
+					$url   = get_field('url');
+
+
+
+					if(!$imgpath){
+						echo '<a href="'.$url.'" target="_blank" class="dm_no-logos">';
+						echo $title;
+						echo '</a>';				
+					}else{
+						echo '<a href="'.$url.'" target="_blank">';
+						echo '<img src="'.$thumb.'" alt="'.$title.'" title="'.$title.'"/>';
+						echo '</a>';
+
+					}
+				}
+			?>
 			</div>
-                
+           </div>
+				<div class="alpha col-md-3 sponsor-fb footer">
+
+									<div class="fb-like-box" data-href="http://www.facebook.com/TeatrBaza" data-width="150" data-height="95" data-show-faces="false" data-border-color="#fff" data-stream="false" data-header="false"></div>
+
+						<p>
+				Teatr Baza<br />
+				ul. Podchorążych 39<br/>
+				00-722 Warszawa<br/>
+				Tel/Faks: 510-053-140<br/>
+				e-mail: biuro@teatrbaza.pl<br/>
+				</p>
+		</div>
                 
 			<?php
 				//echo '&copy;'.date("Y"); echo " "; bloginfo('name');
@@ -115,21 +131,7 @@
 			?>
 			
 			
-			</div>
-		<div class="dm_contact alpha col-md-2 footer">
-		  
-					<div class="fb-like-box" data-href="http://www.facebook.com/TeatrBaza" data-width="150" data-height="95" data-show-faces="false" data-border-color="#fff" data-stream="false" data-header="false"></div>
 		
-		<p>
-<em>teatr baza</em>
-ul. Podchorążych 39<br/>
-00-722 Warszawa<br/>
-Tel/Faks: 510-053-140<br/>
-e-mail: biuro@teatrbaza.pl<br/>
-</p>
-
-
-		</div>
 		<div class="clear"></div>
 		<div class="col-md-12 dm_otr">
 			<span>zaprojektowane przez:</span>
@@ -142,7 +144,6 @@ e-mail: biuro@teatrbaza.pl<br/>
 	<?php wp_footer(); ?>
 
 	
-</div>	
 	
 
 	  <script type="text/javascript">

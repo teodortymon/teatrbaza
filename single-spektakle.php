@@ -5,7 +5,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); 
 			?>
-			<div class="dm_breadcrumbs">
+			<div class="breadcrumbs_new">
 				<?php 
 					$tab=get_field('wyswietlaj_w');
 					$inOld= in_array('archiwum',  $tab);

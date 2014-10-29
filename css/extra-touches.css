@@ -7,6 +7,97 @@ body {
     padding-top: 120px;
 }
 
+h3 {
+    font-size: 30px !important;
+}
+
+h2 {
+    font-size: 25px !important;
+}
+
+a:hover{
+    color:  #292929;
+    text-decoration: none;
+}
+
+
+#bottomMenu {
+    font-family: 'Lato';
+    font-weight: 400;
+/*    font-size: 30px !important;*/
+}
+
+.sub-menu .menu-item{
+    margin: 5px;
+}
+
+.menu-item a:hover{
+    color:  #292929;
+    text-decoration: none;
+}
+
+
+.dm_sponsors{
+    border-right: 1px solid lightgray;
+}
+
+.dm_sponsors a img{
+    margin: 15px;
+}
+    
+
+.sponsor-fb{
+    margin: auto 0;
+text-align: center;
+display: block;
+margin-top: 120px;
+}
+
+.dm_sponsors h2{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 20px !important;
+}
+
+
+
+
+.breadcrumbs_new{
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 20px;
+    margin: 30px 0 50px 0;
+}
+
+.breadcrumbs_new:after {
+		content: '' !important;
+		position: absolute !important;
+        margin-top: 35px;
+		width: 100%; !important;
+		left: 0% !important; 
+        bottom: -5px;
+		border-bottom: 1px solid #dedede !important;
+	}
+
+
+
+
+.breadcrumbs_new a{
+    text-decoration: none;
+    color:inherit;
+    -webkit-transition: font-size 0.4s ease-in-out;
+    -moz-transition: font-size 0.4s ease-in-out;
+    transition: font-size 0.4s ease-in-out
+}
+
+.breadcrumbs_new a:hover{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
 /*
 #carousel-example-generic{
     margin-bottom: 30px;
